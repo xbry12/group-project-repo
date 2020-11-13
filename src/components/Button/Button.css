@@ -1,0 +1,19 @@
+button {
+    border-radius: 2px;
+    padding: 5px 25px;
+}
+.button-edit {
+    background-color: #33A0FF;
+    color: white;
+    border: none;
+}
+.button-delete {
+    background-color: red;
+    color: white;
+    border: none;
+}
+.button-book {
+    background-color: green;
+    color: white;
+    border: none;
+}
