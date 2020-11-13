@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./nav.css";
 
-function Nav() {
+function Nav(props) {
   const [open, setOpen] = useState(false);
   // open is the variable
   // set open is the function
@@ -9,7 +9,7 @@ function Nav() {
     <div>
       <nav>
         <div className="logo"> BodyWorks</div>
-
+        {/* {props.aboutData} */}
         <ul
           className="nav-links"
           // burger transform for responsiveness`

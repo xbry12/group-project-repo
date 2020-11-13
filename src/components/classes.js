@@ -1,13 +1,30 @@
-// import React from 'react'
+import React, { Component } from "react";
+import './classes.css'
 
-// function Classes() {
-//     return (
-//         <div>
-//             {props.data.length !== 0
-//         ? props.data.map((classes) => <h1>{}</h1>) : null}
-            
-//         </div>
-//     )
-// }
+class Classes extends Component {
+    constructor(props) {
+    super()
 
-// export default Classes
+    }
+    
+    render() {
+      console.log(this.props.data)
+    return (
+      <div className="class">
+        {this.props.data.length !== 0
+          ? this.props.data.map((classes) => 
+          <h1>{(classes.name)}
+          <div className="desc">{(classes.description)}</div>
+          </h1>
+              ) 
+        : null}
+
+          {/* booked : Schema -> true/false */}
+          {/* My Schedule -> booked or not, -> class name = button/book or unbook */}
+
+      </div>
+    );
+  }
+}
+
+export default Classes;

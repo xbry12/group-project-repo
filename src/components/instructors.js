@@ -1,6 +1,7 @@
 import React from "react";
 import "./instructors.css";
 
+
 let Instructors = (props) => {
   console.log(props);
   return (
