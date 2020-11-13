@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import "./nav.css";
 
-
 function Nav() {
   const [open, setOpen] = useState(false);
   // open is the variable
   // set open is the function
   return (
-    
     <div>
-        
       <nav>
-        <div className="logo"> BodyWorks </div>
+        <div className="logo"> BodyWorks</div>
 
         <ul
           className="nav-links"

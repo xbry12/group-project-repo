@@ -1,40 +1,39 @@
 import React, { Component } from "react";
 import "./App.css";
 import Nav from "./components/nav.js";
-
+import Instructors from "./components/instructors.js";
+// import Classes from "./components/classes.js"
 
 class App extends Component {
-    // constructor(){
-    //   super()
-    // }
-  
-    componentDidMount() {
-     console.log('!!!')
-    fetch('https://groupgymproject.herokuapp.com/Classes', {
-        headers: {
-            "Accept": "application/json"
-           }
+  constructor(props) {
+    super(props);
+    this.state = {
+      bioJson: [],
+      classesJson: []
+    };
+  }
+
+  componentDidMount() {
+    fetch("https://groupgymproject.herokuapp.com/Classes/Instructors", {
+      headers: {
+        Accept: "application/json",
+      },
     })
-        .then((response) => response.json())
-        .then((data) =>  console.log(data))
-}
+      .then((response) => response.json())
+      .then((output) => this.setState({ bioJson: output }));
 
-
+  }
 
 
   render() {
-    console.log("hellos")
     return (
-      <div className="App"> 
+      <div className="App">
         <div>
           <Nav />
+          {/* <Instructors data={this.state.bio} /> */}
+          <Instructors data={this.state.bioJson} />
+          {/* <Classes data={this.state.classesJson}/> */}
         </div>
-
-        
-
-        {/* <div className="calendar">
-          <MyCalendar/>
-        </div> */}
       </div>
     );
   }
