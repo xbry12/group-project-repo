@@ -5,23 +5,12 @@ const Button = (props) => {
 
     let classList = ''
 
-    let types = ['booked', 'not_booked']
+    let types = ['booked', 'notBooked']
 
     if(types.includes(props.type)){
         classList+= ` button-${props.type}`
     }
-    // if(props.hover) {
-    //     classList += ` button-${props.type}-hover`
-    // }
-    // if(props.outline) {
-    //     classList += ` button-${props.type}-outline`
-    // }
-    // if(props.faded) {
-    //     classList += ` button-${props.type}-faded`
-    // }
-    // if(props.large){
-    //     classList += ` button-large`
-    // }
+    
   
 
    return (
