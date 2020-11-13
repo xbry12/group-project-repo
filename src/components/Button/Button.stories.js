@@ -35,6 +35,6 @@ storiesOf('Button', module)
         type='booked'
         label='Booked' />)
     .add('Not Booked', () => <Button 
-        type='not_booked'
+        type='notBooked'
         label='Not Booked' />)
     
