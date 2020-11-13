@@ -5,7 +5,7 @@ const Button = (props) => {
 
     let classList = ''
 
-    let types = ['edit', 'delete', 'book']
+    let types = ['booked', 'not_booked']
 
     if(types.includes(props.type)){
         classList+= ` button-${props.type}`
