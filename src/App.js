@@ -45,7 +45,7 @@ class App extends Component {
           
 
 
-          {/* <Instructors data={this.state.bioJson} /> */}
+          {/* <Instructors data={this.state.bioJson} />  */}
           {/* <Classes data={this.state.classesJson}/> */}
           {/* <Button/> */}
 
