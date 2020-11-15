@@ -25,7 +25,7 @@ function Nav(props) {
             <a>Classes</a>
           </li>
           <li>
-            <a>My Schedule</a>
+            <a>Bookings</a>
           </li>
         </ul>
         <i onClick={() => setOpen(!open)} className="fas fa-bars burger"></i>

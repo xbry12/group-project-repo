@@ -1,0 +1,27 @@
+.bookings {
+    border: 2px solid black;
+    width: 50vw;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+h1 {
+    background-color: white;
+    color: black;
+    height: 15%;
+    padding: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bookbtn {
+    margin-top: 35%;
+    height: 50px;
+    width: 100px;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+}
