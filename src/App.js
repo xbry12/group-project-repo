@@ -3,6 +3,7 @@ import "./App.css";
 import Nav from "./components/nav.js";
 import Instructors from "./components/instructors.js";
 import Classes from "./components/classes.js"
+import Booking from "./components/booking.js"
 // import Button from './components/Button/Button.js';
 // import ReactDOM from 'react-dom';
 // import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
@@ -13,7 +14,8 @@ class App extends Component {
     super(props);
     this.state = {
       bioJson: [],
-      classesJson: []
+      classesJson: [],
+      bookingsJson: []
     };
   }
 
@@ -33,6 +35,15 @@ class App extends Component {
       })
         .then((response) => response.json())
         .then((output) => this.setState({ classesJson: output }));
+
+        fetch("https://groupgymproject.herokuapp.com/Classes/Bookings", {
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((output) => this.setState({ bookingsJson: output }));
+  
   
   }
 
@@ -44,8 +55,8 @@ class App extends Component {
           <Nav aboutData="Bryant" />
           
 
-
-          {/* <Instructors data={this.state.bioJson} /> */}
+          <Booking/>
+          {/* <Instructors data={this.state.bioJson} />  */}
           {/* <Classes data={this.state.classesJson}/> */}
           {/* <Button/> */}
 

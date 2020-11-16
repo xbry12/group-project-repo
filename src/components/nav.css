@@ -15,15 +15,16 @@ a {
 nav {
   display: flex;
   justify-content: space-around;
-  min-height: 10vh;
+  min-height: 15vh;
   align-items: center;
   font-family: "Ubuntu", sans-serif;
   background-color: black;
   color: white;
+  border-bottom: 1px solid white;
 }
 
 nav .logo {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 700;
   /* text-transform: uppercase; */
 }
@@ -34,13 +35,13 @@ nav .nav-links {
   width: 40%;
 }
 nav .nav-links a {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: normal;
   cursor: pointer;
 }
 nav .nav-links a:hover {
-  font-size: 18px;
-  font-weight: normal;
+  font-size: 24px;
+  font-weight: bold;
   border-bottom: 1px solid white;
 }
 
@@ -49,7 +50,7 @@ nav .burger {
   display: none;
   cursor: pointer;
 }
-
+/* 
 @media all and (max-width: 768px) {
   nav .burger {
     display: block;
@@ -81,4 +82,4 @@ nav .burger {
     font-weight: normal;
     border-bottom: 0px solid white;
   }
-}
+} */

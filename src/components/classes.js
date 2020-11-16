@@ -13,8 +13,13 @@ class Classes extends Component {
       <div className="class">
         {this.props.data.length !== 0
           ? this.props.data.map((classes) => 
-          <h1>{(classes.name)}
-          <div className="desc">{(classes.description)}</div>
+          <h1 className="edit">
+            <span className="nameadjust">
+            {(classes.name)}
+            </span>
+          <div className="desc">
+            {(classes.description)}
+          </div>
           </h1>
               ) 
         : null}
