@@ -15,22 +15,34 @@ const Template = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
-  label: 'Button',
+  size: 'medium',
+  label: 'Book Now',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button',
+  size: 'large',
+  label: 'Welcome to BodyWorks!',
 };
 
 export const Large = Template.bind({});
 Large.args = {
-  size: 'large',
-  label: 'Button',
+  size: 'medium',
+  label: 'Cancel Booking',
 };
 
 export const Small = Template.bind({});
 Small.args = {
   size: 'small',
-  label: 'Button',
+  label: 'Like',
 };
+
+export const Medium = Template.bind({});
+Medium.args = {
+  
+  size: Medium,
+  label: 'Join Now',
+};
+
+
+

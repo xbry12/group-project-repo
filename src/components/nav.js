@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import {  Link } from 'react-router-dom'
+import logo from '../images/Screen Shot 2020-11-16 at 4.13.15 PM.png'
 import "./nav.css";
+// import Dumbbell from './Dumbbell/Dumbbell.js' 
 
 function Nav(props) {
   const [open, setOpen] = useState(false);
@@ -10,7 +12,10 @@ function Nav(props) {
     <div>
       <nav>
         <div className="logo">
-           <Link to="/">BodyWorks</Link>
+           <Link to="/">BodyWorks 
+           <img src={logo}/>
+           {/* <div className='dumbbell'><Dumbbell /> </div> */}
+           </Link> 
            </div>
         {/* {props.aboutData} */}
         <ul
