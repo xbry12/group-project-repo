@@ -7,7 +7,7 @@ function Dropdown({ title, items, multiSelect = false }) {
   const [open, setOpen] = useState(false);
   const [selection, setSelection] = useState([]);
   const toggle = () => setOpen(!open);
-
+console.log('in dropdown!')
   function handleClick(items) {}
   return (
     <div className="dd-wrapper">

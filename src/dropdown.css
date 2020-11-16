@@ -1,5 +1,7 @@
 .dd-wrapper {
     background-color: red;
+    height: 30px;
+    width: 100%;
 }
 
 .dd-header {

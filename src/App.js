@@ -5,7 +5,8 @@ import Instructors from "./components/instructors.js";
 import Classes from "./components/classes.js";
 import Booking from "./components/booking.js";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-// import Button from './components/Button/Button.js';
+// import Button from './stories/Button'
+// import Button from './stories/Button'
 // import ReactDOM from 'react-dom';
 // import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 
@@ -50,7 +51,7 @@ class App extends Component {
       <div className="App">
         <div>
           <BrowserRouter>
-            <Nav aboutData="Bryant"/>
+            <Nav />
             <Switch>
               <Route exact path="/" component={""}></Route>
               <Route exact path="/Classes/Instructors">
