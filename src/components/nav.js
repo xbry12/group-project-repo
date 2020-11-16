@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {  Link } from 'react-router-dom'
 import "./nav.css";
 
 function Nav(props) {
@@ -8,7 +9,9 @@ function Nav(props) {
   return (
     <div>
       <nav>
-        <div className="logo"> BodyWorks</div>
+        <div className="logo">
+           <Link to="/">BodyWorks</Link>
+           </div>
         {/* {props.aboutData} */}
         <ul
           className="nav-links"
@@ -16,16 +19,16 @@ function Nav(props) {
           style={{ transform: open ? "translateX(0px)" : "" }}
         >
           <li>
-            <a>About Us</a>
+            <Link to="/">About Us</Link>
           </li>
           <li>
-            <a>Instructors</a>
+            <Link to="Classes/Instructors">Instructors</Link>
           </li>
           <li>
-            <a>Classes</a>
+            <Link to="/Classes">Classes</Link>
           </li>
           <li>
-            <a>Bookings</a>
+            <Link to="/Classes/Booking">Bookings</Link>
           </li>
         </ul>
         <i onClick={() => setOpen(!open)} className="fas fa-bars burger"></i>
