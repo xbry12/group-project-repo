@@ -1,53 +1,70 @@
-# GYM group-project 
+# Getting Started with Create React App
 
-## Description 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This is a project where we built the front end to our back end using React! By fetching our URL and routes into this project, we have created a full application. The purpose of our project is to go to a gym website and book a workout class at the gym. By booking a class, updating the booking, or deleting the booking, we have implemented full CRUD functuality. 
+## Available Scripts
 
-## Example
+In the project directory, you can run:
 
-The example below is from Src/App.js and shows our fetch calls in componentDidMount. 
+### `npm start`
 
-componentDidMount() {
-    fetch("https://groupgymproject.herokuapp.com/Classes/Instructors", {
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((output) => this.setState({ bioJson: output }));
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-      fetch("https://groupgymproject.herokuapp.com/Classes/", {
-        headers: {
-          Accept: "application/json",
-        },
-      })
-        .then((response) => response.json())
-        .then((output) => this.setState({ classesJson: output }));
-  
-  }
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## Features
+### `npm test`
 
-We first did a fetch call on our data so we could populate our page with information. We then set up our components, five of which were made in storybook, and used our routes for each component so they would all have a landing page. Using Jest we were able to test our components and their functions. Lastly, we created our Bookings component to have full CRUD functuality. 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
-## Technologies
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-For this project, we used React, Storybook, and Jest. 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Installing 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-To set up this project you will first need to fork my repo by clicking on Fork in the top right corner and choosing where to fork to. Then you will click Clone or Download and copy the url. Next open your terminal and change to the directory you wish to work on the project. Here you will run the command 'git clone' followed by pasting the url you just copied. Hit enter. You can now change to the project directory at group-project-repo. Run the command npm start and this will bring you to the project in your chrome. 
+### `npm run eject`
 
-## Authors
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-https://github.com/xbry12/group-project-repo
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-https://github.com/xbry12/group-project-repo/issues
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Bryant Pyram: xbry12
-Lily Klopcic: Lilypk
-SamiDenis: SamiDenis
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
