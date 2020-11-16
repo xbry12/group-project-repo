@@ -13,7 +13,7 @@ class Booking extends Component {
         <h1>Book Appointment</h1>
         <div className="bookinginfo">
           {this.props.data.length !== 0
-            ? this.props.data.map((bookings) => <h2>{(bookings.time)}</h2>)
+            ? this.props.data.map((bookings) => <h2>{(bookings.day)}</h2>)
             : null}
         </div>
 

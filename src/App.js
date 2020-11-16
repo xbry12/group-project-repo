@@ -55,7 +55,7 @@ class App extends Component {
           <Nav aboutData="Bryant" />
           
 
-          <Booking/>
+          <Booking data={this.state.bookingsJson}/>
           {/* <Instructors data={this.state.bioJson} />  */}
           {/* <Classes data={this.state.classesJson}/> */}
           {/* <Button/> */}
