@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import {useState} from 'react'
 import "./booking.css";
 import { Button } from "../stories/Button";
 import Dropdown from "../dropdown";
@@ -9,6 +8,7 @@ class Booking extends Component {
     super();
     this.state = {
       instructors: "",
+      data: [],
     };
   }
 
@@ -27,6 +27,10 @@ class Booking extends Component {
   //   });
   // }
 
+  componentDidMount() {
+    this.fetchBookingData();
+  }
+
   handleApp = (e) => {
     e.preventDefault();
 
@@ -39,7 +43,7 @@ class Booking extends Component {
       body: JSON.stringify({ date: this.state.date, "if-booked": true }),
     })
       .then((response) => response.json())
-      .then((output) => console.log(output));
+      .then((output) => this.fetchBookingData());
   };
 
   handleClass = (e) => {
@@ -58,7 +62,7 @@ class Booking extends Component {
       },
     })
       .then((response) => response.json())
-      .then((output) => console.log(output));
+      .then((output) => this.fetchBookingData());
   };
 
   handleUpdate = (_id, e) => {
@@ -71,18 +75,28 @@ class Booking extends Component {
       body: JSON.stringify({ date: this.state.date, "if-booked": false }),
     })
       .then((response) => response.json())
-      .then((output) => console.log(output));
+      .then((output) => this.fetchBookingData());
+  };
+
+  fetchBookingData = () => {
+    fetch("https://groupgymproject.herokuapp.com/Classes/Bookings", {
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((output) => this.setState({ data: output }));
   };
 
   render() {
-    console.log(this.props.data);
+    console.log(this.state.data);
     return (
       <div className="bookings">
         {/* <h1>Book Appointment</h1> */}
 
         <div className="bookinginfo">
-          {this.props.data.length !== 0
-            ? this.props.data.map((bookings) => (
+          {this.state.data.length !== 0
+            ? this.state.data.map((bookings) => (
                 <div>
                   <h2>
                     {bookings.date}
@@ -100,7 +114,6 @@ class Booking extends Component {
                     label="Update Booking"
                     onClick={(e) => this.handleUpdate(bookings._id, e)}
                   />
-                  
                 </div>
               ))
             : null}
