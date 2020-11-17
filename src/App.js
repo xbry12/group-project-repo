@@ -4,11 +4,8 @@ import Nav from "./components/nav.js";
 import Instructors from "./components/instructors.js";
 import Classes from "./components/classes.js";
 import Booking from "./components/booking.js";
+import { Button } from "./stories/Button";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-// import Button from './stories/Button'
-// import Button from './stories/Button'
-// import ReactDOM from 'react-dom';
-// import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 
 class App extends Component {
   constructor(props) {
@@ -53,7 +50,14 @@ class App extends Component {
           <BrowserRouter>
             <Nav />
             <Switch>
-              <Route exact path="/" component={""}></Route>
+              <Route exact path="/" component={""}>
+                <div className="welcome">
+                  <Button
+                    className="storybook-button--secondary storybook-button--extra-large"
+                    label="Welcome to BodyWorks"
+                  />
+                </div>
+              </Route>
               <Route exact path="/Classes/Instructors">
                 <Instructors data={this.state.bioJson} />
               </Route>
@@ -61,13 +65,17 @@ class App extends Component {
                 <Classes data={this.state.classesJson} />
               </Route>
               <Route exact path="/Classes/Booking">
-                
-              {this.state.bioJson ? <Booking data={this.state.bookingsJson} instructors = {this.state.bioJson} /> : 'loading'}
+                {this.state.bioJson ? (
+                  <Booking
+                    data={this.state.bookingsJson}
+                    instructors={this.state.bioJson}
+                  />
+                ) : (
+                  "loading"
+                )}
               </Route>
             </Switch>
           </BrowserRouter>
-
-          {/* <Button/> */}
         </div>
       </div>
     );

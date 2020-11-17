@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./booking.css";
 import { Button } from "../stories/Button";
-import Dropdown from "../dropdown";
 
 class Booking extends Component {
   constructor(props) {
@@ -12,24 +11,19 @@ class Booking extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   let hello = [];
-  //   this.props.instructors.forEach((person, i) => {
-  //     hello.push({
-  //       id: person._id,
-  //       value: `${person.firstName} ${person.lastName}`,
-  //     });
-  //     // console.log(person)
-  //   });
-  //   console.log(hello);
-  //   this.setState({
-  //     items: hello,
-  //   });
-  // }
-
   componentDidMount() {
     this.fetchBookingData();
   }
+
+  fetchBookingData = () => {
+    fetch("https://groupgymproject.herokuapp.com/Classes/Bookings", {
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((output) => this.setState({ data: output }));
+  };
 
   handleApp = (e) => {
     e.preventDefault();
@@ -78,69 +72,49 @@ class Booking extends Component {
       .then((output) => this.fetchBookingData());
   };
 
-  fetchBookingData = () => {
-    fetch("https://groupgymproject.herokuapp.com/Classes/Bookings", {
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((output) => this.setState({ data: output }));
-  };
-
   render() {
     console.log(this.state.data);
     return (
-      <div className="bookings">
-        {/* <h1>Book Appointment</h1> */}
-
-        <div className="bookinginfo">
-          {this.state.data.length !== 0
-            ? this.state.data.map((bookings) => (
-                <div>
-                  <h2>
-                    {bookings.date}
-                    {bookings._id}
-                  </h2>
-                  <Button
-                    className="storybook-button--primary storybook-button--small"
-                    label="Remove Appt"
-                    // onClick={(bookings._id => {this.handleDelete})}
-                    onClick={(e) => this.handleDelete(bookings._id, e)}
-                  />
-
-                  <Button
-                    className="storybook-button--secondary storybook-button--small book2"
-                    label="Update Booking"
-                    onClick={(e) => this.handleUpdate(bookings._id, e)}
-                  />
-                </div>
-              ))
-            : null}
-        </div>
-
-        <div className="container">
-          {/* <Dropdown title="select instructor" items={this.state.items} /> */}
-        </div>
-
-        <div className="existingbookings">
+      <div>
+        <div className="bookapt">
           <p>Book Appointment</p>
-
           <form>
             <label>
               Choose Day
               <input type="text" onChange={this.handleClass} name="name" />
             </label>
-
-            {console.log(this.state.input)}
             <div>
               <Button
                 className="storybook-button--primary storybook-button--small book"
-                label="Booked"
+                label="Book Now"
                 onClick={this.handleApp}
               />
             </div>
           </form>
+        </div>
+
+        <div className="bookings">
+          <h1>Appointments Booked</h1>
+          <div className="bookinginfo">
+            {this.state.data.length !== 0
+              ? this.state.data.map((bookings) => (
+                  <div className="appt">
+                    {bookings.date}
+                    {/* {bookings._id} */}
+                    <Button
+                      className="storybook-button--primary storybook-button--small"
+                      label="Remove Appt"
+                      onClick={(e) => this.handleDelete(bookings._id, e)}
+                    />
+                    <Button
+                      className="storybook-button--secondary storybook-button--small book2"
+                      label="Update Booking"
+                      onClick={(e) => this.handleUpdate(bookings._id, e)}
+                    />
+                  </div>
+                ))
+              : null}
+          </div>
         </div>
       </div>
     );

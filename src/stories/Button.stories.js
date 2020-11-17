@@ -22,6 +22,13 @@ Primary.args = {
 export const Secondary = Template.bind({});
 Secondary.args = {
   size: 'large',
+  label: 'Secondary',
+};
+
+
+export const BodyWorks= Template.bind({});
+BodyWorks.args = {
+  size: 'large',
   label: 'Welcome to BodyWorks!',
 };
 

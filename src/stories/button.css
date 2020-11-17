@@ -15,8 +15,9 @@
 }
 .storybook-button--secondary {
   color: #333;
-  background-color: transparent;
+  /* background-color: transparent; */
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  border-radius: 10px 10px 10px 10px;
   
 }
 .storybook-button--small {
@@ -32,4 +33,19 @@
   padding: 12px 24px;
   height: 400px;
   width: 400px;
+}
+
+.storybook-button--extra-large {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  margin-left: 715px;
+  margin-top: 20%;
+  font-size: 72px;
+  margin-bottom: 40%;
+  height: 500px;
+  width: 500px;
+  border: 15px solid white;
+  font-family: "Ubuntu", sans-serif;
+
 }
