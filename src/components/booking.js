@@ -12,7 +12,6 @@ class Booking extends Component {
     };
   }
 
-
   // componentDidMount() {
   //   let hello = [];
   //   this.props.instructors.forEach((person, i) => {
@@ -27,27 +26,41 @@ class Booking extends Component {
   //     items: hello,
   //   });
   // }
-  
+
   handleApp = (e) => {
-    e.preventDefault()
-    
+    e.preventDefault();
+
     fetch("https://groupgymproject.herokuapp.com/Classes/Bookings", {
+      method: "POST",
       headers: {
-        body: this.state.date,
         Accept: "application/json",
+        "Content-Type": "application/json",
       },
+      body: JSON.stringify({ date: this.state.date, "if-booked": true }),
     })
       .then((response) => response.json())
-      .then((output) =>(console.log(output) ));
+      .then((output) => console.log(output));
 
     // console.log(this.state.date);
   };
 
   handleClass = (e) => {
     this.setState({
-      date: e.target.value
-    })
+      date: e.target.value,
+    });
     console.log(e.target.value);
+  };
+  handleDelete = (_id,e) => {
+    console.log(_id)
+    fetch("https://groupgymproject.herokuapp.com/Classes/Bookings/" + _id, {
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((output) => console.log(output));
   };
 
   render() {
@@ -60,10 +73,15 @@ class Booking extends Component {
           {this.props.data.length !== 0
             ? this.props.data.map((bookings) => (
                 <div>
-                  {/* <h2>{(bookings.day)}</h2> */}
+                  <h2>
+                    {bookings.date}
+                    {bookings._id}
+                  </h2>
                   <Button
                     className="storybook-button--primary storybook-button--small"
-                    label="Booked"
+                    label="Remove Appt"
+                    // onClick={(bookings._id => {this.handleDelete})}
+                    onClick={(e) => this.handleDelete(bookings._id,e)}
                   />
                 </div>
               ))
@@ -82,7 +100,7 @@ class Booking extends Component {
               Choose Day
               <input type="text" onChange={this.handleClass} name="name" />
             </label>
-         
+
             {console.log(this.state.input)}
             <div>
               <Button
@@ -92,7 +110,7 @@ class Booking extends Component {
               />
               <Button
                 className="storybook-button--secondary storybook-button--small book2"
-                label="Cancel Booking"
+                label="Update Booking"
               />
             </div>
           </form>
