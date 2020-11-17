@@ -14,7 +14,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      bioJson: [],
+      bioJson: null,
       classesJson: [],
       bookingsJson: [],
     };
@@ -61,7 +61,8 @@ class App extends Component {
                 <Classes data={this.state.classesJson} />
               </Route>
               <Route exact path="/Classes/Booking">
-                <Booking data={this.state.bookingsJson} />
+                
+              {this.state.bioJson ? <Booking data={this.state.bookingsJson} instructors = {this.state.bioJson} /> : 'loading'}
               </Route>
             </Switch>
           </BrowserRouter>
