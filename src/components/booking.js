@@ -40,8 +40,6 @@ class Booking extends Component {
     })
       .then((response) => response.json())
       .then((output) => console.log(output));
-
-    // console.log(this.state.date);
   };
 
   handleClass = (e) => {
@@ -50,14 +48,27 @@ class Booking extends Component {
     });
     console.log(e.target.value);
   };
-  handleDelete = (_id,e) => {
-    console.log(_id)
+  handleDelete = (_id, e) => {
+    console.log(_id);
     fetch("https://groupgymproject.herokuapp.com/Classes/Bookings/" + _id, {
       method: "DELETE",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
+    })
+      .then((response) => response.json())
+      .then((output) => console.log(output));
+  };
+
+  handleUpdate = (_id, e) => {
+    fetch("https://groupgymproject.herokuapp.com/Classes/Bookings/" + _id, {
+      method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ date: this.state.date, "if-booked": false }),
     })
       .then((response) => response.json())
       .then((output) => console.log(output));
@@ -81,8 +92,15 @@ class Booking extends Component {
                     className="storybook-button--primary storybook-button--small"
                     label="Remove Appt"
                     // onClick={(bookings._id => {this.handleDelete})}
-                    onClick={(e) => this.handleDelete(bookings._id,e)}
+                    onClick={(e) => this.handleDelete(bookings._id, e)}
                   />
+
+                  <Button
+                    className="storybook-button--secondary storybook-button--small book2"
+                    label="Update Booking"
+                    onClick={(e) => this.handleUpdate(bookings._id, e)}
+                  />
+                  
                 </div>
               ))
             : null}
@@ -107,10 +125,6 @@ class Booking extends Component {
                 className="storybook-button--primary storybook-button--small book"
                 label="Booked"
                 onClick={this.handleApp}
-              />
-              <Button
-                className="storybook-button--secondary storybook-button--small book2"
-                label="Update Booking"
               />
             </div>
           </form>
