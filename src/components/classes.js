@@ -11,9 +11,11 @@ class Classes extends Component {
       console.log(this.props.data)
     return (
       <div className="class">
+        <p></p>
         {this.props.data.length !== 0
           ? this.props.data.map((classes) => 
           <h1 className="edit">
+            
             <span className="nameadjust">
             {(classes.name)}
             </span>
