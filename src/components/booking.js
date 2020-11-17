@@ -101,7 +101,7 @@ class Booking extends Component {
                   <h2>
                     {bookings.date}
                     {bookings._id}
-                    <p></p>
+                    
                   </h2>
                   <Button
                     className="storybook-button--primary storybook-button--small"
