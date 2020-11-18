@@ -6,6 +6,8 @@ import Classes from "./components/classes.js";
 import Booking from "./components/booking.js";
 import { Button } from "./stories/Button";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import {FooterContainer} from "./components/footerdata/footer"
+
 
 class App extends Component {
   constructor(props) {
@@ -76,6 +78,7 @@ class App extends Component {
               </Route>
             </Switch>
           </BrowserRouter>
+          <FooterContainer/>
         </div>
       </div>
     );
