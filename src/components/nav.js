@@ -11,7 +11,7 @@ function Nav(props) {
     <div>
       <nav>
         <div className="logo">
-          <Link to="/group-project-repo/" className="nav-links">
+          <Link to="/group-project-repo/" className="link">
             <div className="title">BodyWorks</div>
             <img src={logo} />
           </Link>
