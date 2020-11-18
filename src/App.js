@@ -51,7 +51,7 @@ class App extends Component {
           <BrowserRouter>
             <Nav />
             <Switch>
-              <Route exact path="/">
+              <Route exact path="/group-project-repo/">
                 <div className="welcome">
                   <Button
                     className="storybook-button--secondary storybook-button--extra-large"
