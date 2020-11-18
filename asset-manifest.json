@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/group-project-repo/static/css/main.de5252c9.chunk.css",
+    "main.css": "/group-project-repo/static/css/main.5d6fc9d4.chunk.css",
     "main.js": "/group-project-repo/static/js/main.021015f4.chunk.js",
     "main.js.map": "/group-project-repo/static/js/main.021015f4.chunk.js.map",
     "runtime-main.js": "/group-project-repo/static/js/runtime-main.c2fca84f.js",
@@ -10,7 +10,7 @@
     "static/js/3.e989d09a.chunk.js": "/group-project-repo/static/js/3.e989d09a.chunk.js",
     "static/js/3.e989d09a.chunk.js.map": "/group-project-repo/static/js/3.e989d09a.chunk.js.map",
     "index.html": "/group-project-repo/index.html",
-    "static/css/main.de5252c9.chunk.css.map": "/group-project-repo/static/css/main.de5252c9.chunk.css.map",
+    "static/css/main.5d6fc9d4.chunk.css.map": "/group-project-repo/static/css/main.5d6fc9d4.chunk.css.map",
     "static/js/2.69767ef9.chunk.js.LICENSE.txt": "/group-project-repo/static/js/2.69767ef9.chunk.js.LICENSE.txt",
     "static/media/classes.css": "/group-project-repo/static/media/imagehero.5cfb7037.jpg",
     "static/media/App.css": "/group-project-repo/static/media/superman.f91a4627.jpeg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.c2fca84f.js",
     "static/js/2.69767ef9.chunk.js",
-    "static/css/main.de5252c9.chunk.css",
+    "static/css/main.5d6fc9d4.chunk.css",
     "static/js/main.021015f4.chunk.js"
   ]
 }
