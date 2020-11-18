@@ -9,7 +9,6 @@
 }
 .storybook-button--primary {
   color: #333;
-  /* background-color: transparent; */
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
   border-radius: 10px 10px 10px 10px;
   margin-right: 1%;
@@ -17,7 +16,6 @@
 }
 .storybook-button--secondary {
   color: #333;
-  /* background-color: transparent; */
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
   border-radius: 10px 10px 10px 10px;
   
@@ -53,8 +51,6 @@
 }
 
 @media (max-width: 768px) {
-  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
-  
   .storybook-button--extra-large {
   margin-left: auto;
   }

@@ -51,18 +51,16 @@ class App extends Component {
           <BrowserRouter>
             <Nav />
             <Switch>
-              <Route exact path="/" component={""}>
+              <Route exact path="/">
                 <div className="welcome">
                   <Button
                     className="storybook-button--secondary storybook-button--extra-large"
                     label="Welcome to BodyWorks"
                   />
-                  {/* <div className="join"> */}
                   <Button
                     className="storybook-button--primary storybook-button--small join"
                     label="Join Now"
                   />
-                  {/* </div> */}
                 </div>
               </Route>
               <Route exact path="/Classes/Instructors">

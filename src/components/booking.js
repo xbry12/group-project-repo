@@ -100,7 +100,6 @@ class Booking extends Component {
               ? this.state.data.map((bookings) => (
                   <div className="appt">
                     {bookings.date}
-                    {/* {bookings._id} */}
                     <Button
                       className="storybook-button--primary storybook-button--small"
                       label="Remove Appt"

@@ -31,8 +31,6 @@ nav {
 nav .logo {
   font-size: 40px;
   font-weight: 700;
-  /* color: white; */
-  /* text-transform: uppercase; */
 }
 
 nav .nav-links {
@@ -41,7 +39,6 @@ nav .nav-links {
   width: 40%;
   color: white;
   margin-top: 1%;
-  
 }
 nav .nav-links a {
   font-size: 22px;
@@ -62,7 +59,6 @@ nav .burger {
 }
 
 @media all and (max-width: 768px) {
-
   nav .logo {
     display: inline-block;
     font-size: 40px;
@@ -101,5 +97,4 @@ nav .burger {
     font-weight: normal;
     border-bottom: 0px solid white;
   }
-} 
-
+}
