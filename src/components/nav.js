@@ -23,7 +23,7 @@ function Nav(props) {
           style={{ transform: open ? "translateX(0px)" : "" }}
         >
           <li>
-            <Link to="Classes/Instructors" className="link">
+            <Link to="/Classes/Instructors" className="link">
               Instructors
             </Link>
           </li>
