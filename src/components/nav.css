@@ -15,6 +15,12 @@ a {
 .title {
   margin: 50px;
   margin-right: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.link {
+  display: flex;
 }
 
 nav {
