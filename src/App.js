@@ -51,18 +51,6 @@ class App extends Component {
           <BrowserRouter>
             <Nav />
             <Switch>
-              <Route exact path="/group-project-repo/">
-                <div className="welcome">
-                  <Button
-                    className="storybook-button--secondary storybook-button--extra-large"
-                    label="Welcome to BodyWorks"
-                  />
-                  <Button
-                    className="storybook-button--primary storybook-button--small join"
-                    label="Join Now"
-                  />
-                </div>
-              </Route>
               <Route exact path="/Classes/Instructors">
                 <Instructors data={this.state.bioJson} />
               </Route>
@@ -78,6 +66,18 @@ class App extends Component {
                 ) : (
                   "loading"
                 )}
+              </Route>
+              <Route exact path="/group-project-repo/">
+                <div className="welcome">
+                  <Button
+                    className="storybook-button--secondary storybook-button--extra-large"
+                    label="Welcome to BodyWorks"
+                  />
+                  <Button
+                    className="storybook-button--primary storybook-button--small join"
+                    label="Join Now"
+                  />
+                </div>
               </Route>
             </Switch>
           </BrowserRouter>
