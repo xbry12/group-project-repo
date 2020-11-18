@@ -51,11 +51,11 @@ class App extends Component {
           <BrowserRouter>
             <Nav />
             <Switch>
-              <Route exact path="/Classes/Instructors">
-                <Instructors data={this.state.bioJson} />
-              </Route>
               <Route exact path="/Classes">
                 <Classes data={this.state.classesJson} />
+              </Route>
+              <Route exact path="/Classes/Instructors">
+                <Instructors data={this.state.bioJson} />
               </Route>
               <Route exact path="/Classes/Booking">
                 {this.state.bioJson ? (
