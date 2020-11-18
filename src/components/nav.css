@@ -12,6 +12,11 @@ a {
   text-decoration: none;
 }
 
+.title {
+  margin: 50px;
+  margin-right: 10px;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -26,6 +31,7 @@ nav {
 nav .logo {
   font-size: 40px;
   font-weight: 700;
+  /* color: white; */
   /* text-transform: uppercase; */
 }
 
@@ -33,6 +39,8 @@ nav .nav-links {
   display: flex;
   justify-content: space-around;
   width: 40%;
+  color: white;
+  margin-top: 1%;
   
 }
 nav .nav-links a {
@@ -52,11 +60,20 @@ nav .burger {
   display: none;
   cursor: pointer;
 }
-/* 
+
 @media all and (max-width: 768px) {
+
+  nav .logo {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 70px 60px;
+  }
+
   nav .burger {
     display: block;
   }
+
   nav .nav-links {
     position: absolute;
     display: block;
@@ -84,5 +101,5 @@ nav .burger {
     font-weight: normal;
     border-bottom: 0px solid white;
   }
-} */
+} 
 

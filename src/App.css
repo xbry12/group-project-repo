@@ -6,3 +6,25 @@ body {
     background-image: url('./images/superman.jpeg');
     background-size: cover;
 }
+
+.join {
+    margin: 0px;
+    height: 50px;
+    /* margin-left: 1000px; */
+    /* width: 100px; */
+    /* background-color: white; */
+    /* margin-right: 300px; */
+    /* position: absolute; */
+    /* margin-top: 40%; */
+
+}
+
+/* @media all and (max-width: 768px) {
+    
+    .welcome {
+        height: 100%;
+        background-image: url('./images/superman.jpeg');
+        background-size: cover;
+
+    }
+  } */

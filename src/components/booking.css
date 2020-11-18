@@ -3,19 +3,30 @@ body {
 }
 
 .bookings {
-    border: 2px solid black;
+    border: 3px solid black;
     width: 50vw;
-    height: 80vh;
+    height: 60vh;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 25%;
     background-color: black;
     color: white;
     text-align: center;
+    box-shadow: 5px 5px 15px 5px rgba(95, 95, 95, 0.842);
+
 }
+
+.bookings:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.945);
+      
+}
+
+
+
 h1 {
     background-color: white;
     color: black;
-    height: 20%;
+    height: 30%;
     padding: 2%;
     margin-left: auto;
     margin-right: auto;
@@ -46,35 +57,19 @@ p {
     width: 500px;
     color: black; 
     background-color:white;
-    border: 5px solid grey;
+    box-shadow: 5px 5px 15px 5px rgba(95, 95, 95, 0.842);
+
+}
+
+
+
+.bookapt:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.945);
+      
 }
 
 .book {
     margin-top: 10%;
     margin-left: 10%;
 }
-/* 
-.bookinginfo {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: red;
-    position: relative;
-} */
 
-.appt {
-    /* margin-left: auto;    */
-    /* margin-right: auto;   */
-    /* background-color: red; */
-    /* justify-content: space-around; */
-}
-
-/* .book2 {
-    width: 150px;
-    height: 38px;
-    margin-left: auto;
-    margin-right: auto;
-} */
-/* 
-p  {
-    margin-bottom: 10%;
-} */

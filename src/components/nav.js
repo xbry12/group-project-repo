@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/Screen Shot 2020-11-16 at 4.13.15 PM.png";
 import "./nav.css";
-// import Dumbbell from './Dumbbell/Dumbbell.js'
+
 
 function Nav(props) {
   const [open, setOpen] = useState(false);
@@ -13,7 +13,9 @@ function Nav(props) {
       <nav>
         <div className="logo">
           <Link to="/" className ="nav-links">
+            <div className="title">
             BodyWorks
+            </div>
             <img src={logo} />
           </Link>
         </div>
@@ -23,9 +25,9 @@ function Nav(props) {
           // burger transform for responsiveness`
           style={{ transform: open ? "translateX(0px)" : "" }}
         >
-          <li>
+          {/* <li>
             <Link to="/" className ="navlink">About Us</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="Classes/Instructors" className ="link">Instructors</Link>
           </li>

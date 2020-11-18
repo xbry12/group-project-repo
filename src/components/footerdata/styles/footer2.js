@@ -8,9 +8,9 @@ export const Container = styled.div`
     rgb(0,0,0) 100%
   );
 
-//   @media (max-width: 1000px) {
-//       padding: 70px 30px;
-//   }
+  @media (max-width: 1000px) {
+      padding: 70px 30px;
+  }
 `
 // change wrapper?
 export const Wrapper = styled.div`

@@ -6,8 +6,7 @@ import Classes from "./components/classes.js";
 import Booking from "./components/booking.js";
 import { Button } from "./stories/Button";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import {FooterContainer} from "./components/footerdata/footer"
-
+import { FooterContainer } from "./components/footerdata/footer";
 
 class App extends Component {
   constructor(props) {
@@ -58,6 +57,12 @@ class App extends Component {
                     className="storybook-button--secondary storybook-button--extra-large"
                     label="Welcome to BodyWorks"
                   />
+                  {/* <div className="join"> */}
+                  <Button
+                    className="storybook-button--primary storybook-button--small join"
+                    label="Join Now"
+                  />
+                  {/* </div> */}
                 </div>
               </Route>
               <Route exact path="/Classes/Instructors">
@@ -78,7 +83,7 @@ class App extends Component {
               </Route>
             </Switch>
           </BrowserRouter>
-          <FooterContainer/>
+          <FooterContainer />
         </div>
       </div>
     );

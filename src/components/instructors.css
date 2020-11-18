@@ -34,3 +34,10 @@
     font-size: 24px;
     padding: 5%;
 }
+
+
+@media (max-width: 768px) {
+   .bio {
+       font-size: 18px;
+   }
+  }
