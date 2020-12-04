@@ -69,11 +69,12 @@ class App extends Component {
               </Route>
               <Route exact path="/group-project-repo/">
                 <div className="welcome">
+                  
                   <Button
-                    className="storybook-button--secondary storybook-button--extra-large"
+                    className="storybook-button--secondary storybook-button--extra-large bodyworksbutton"
                     label="Welcome to BodyWorks"
-                  />
-                  <Button
+                  /> 
+                   <Button
                     className="storybook-button--primary storybook-button--small join"
                     label="Join Now"
                   />
