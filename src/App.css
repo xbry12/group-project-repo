@@ -19,12 +19,11 @@ body {
 
 }
 
-/* @media all and (max-width: 768px) {
-    
+/* @media screen and (max-width: 1000px) {
     .welcome {
-        height: 100%;
-        background-image: url('./images/superman.jpeg');
-        background-size: cover;
+      display: none;
 
     }
   } */
+
+  

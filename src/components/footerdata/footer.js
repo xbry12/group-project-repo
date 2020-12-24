@@ -26,7 +26,7 @@ export function FooterContainer() {
             <Footer.Link href="#">United Kingdom</Footer.Link>
             <Footer.Link href="#">Development</Footer.Link>
             <Footer.Link href="#">Support</Footer.Link>
-          </Footer.Column>
+          </Footer.Column> 
           <Footer.Column>
             <Footer.Title>Social</Footer.Title>
             <Footer.Link href="#"><Icon className="fab fa-facebook "/>Facebook</Footer.Link>
@@ -39,3 +39,6 @@ export function FooterContainer() {
     </Footer>
   )
 }
+
+// followed the following tutorial to create the footer:
+// https://www.youtube.com/watch?v=SdWJj1LSQPE
